@@ -17,20 +17,17 @@ Madby is an Emby plugin release package for Emby 4.9.x environments.
 
 Download:
 
-- `dist/Madby-0.3.0-20260627.zip`
+- [Latest release](https://github.com/madbrolab/madby/releases/latest)
 
-Checksum:
-
-- `SHA256SUMS.txt`
+The release asset is a single plugin file: `Madby.dll`.
 
 ## Install
 
-1. Download `dist/Madby-0.3.0-20260627.zip`.
-2. Extract the archive.
-3. Copy `Madby.dll`, `zh/Madby.resources.dll`, and `zh-hant/Madby.resources.dll` into the Emby `plugins` directory.
-4. Restart Emby.
-5. Open the Madby plugin page in Emby and configure it.
+1. Download `Madby.dll` from the latest release.
+2. Copy `Madby.dll` into the Emby `plugins` directory.
+3. Restart Emby.
+4. Open the Madby plugin page in Emby and configure it.
 
 ## Note
 
-This repository publishes only the project overview and build artifacts. Source code is not included.
+This repository publishes only the project overview and release artifacts. Source code is not included.
