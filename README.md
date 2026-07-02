@@ -12,6 +12,7 @@ Madby is an Emby plugin release package for Emby 4.9.x environments.
 - Missing primary image refresh for movies, series, seasons, episodes and videos.
 - Chapter marker cleanup and media-library maintenance tasks.
 - Memory cleanup and batch-task resource recovery.
+- Built-in auto update from GitHub Releases.
 
 ## Latest Build
 
