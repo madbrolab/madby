@@ -22,6 +22,18 @@ Download:
 
 The release asset is a single plugin file: `Madby.dll`.
 
+## Latest Update
+
+- Deep delete now removes the CD2-mounted target file referenced by the deleted STRM, plus related sidecar files and empty folders, while staying inside the configured allowed roots.
+- The deep-delete root picker can use the CD2 mount prefix resolved from dian115 through the configured OpenAPI key.
+- The log page has been reorganized into compact status sections and includes a full history cleanup action.
+- The default ffprobe wait time for FFP is now 10 seconds.
+- Plugin tabs are localized in Chinese again.
+
+SHA256:
+
+`F625B1D6B79051FA88B5E941FC75E3CB8466BAD22BCDF1609570230F30B6B8D0`
+
 ## Install
 
 1. Download `Madby.dll` from the latest release.
