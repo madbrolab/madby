@@ -1,12 +1,12 @@
 # Madby
 
-Madby is an Emby plugin release package for Emby 4.9.x environments.
+Madby is an Emby plugin release package. The current build is checked against official Emby 4.8.10.0, 4.9.5.0, 4.10.0.40 and 4.10.1.0 assemblies.
 
 ## Features
 
 - dian115 FFP media-info injection with native Emby scan fallback.
 - Media-info JSON snapshot persistence and restore.
-- External subtitle scan and registration.
+- External subtitle scan and immediate registration after native Emby subtitle downloads.
 - SubHD subtitle entry points.
 - Movie multi-version merge.
 - Missing primary image refresh for movies, series, seasons, episodes and videos.
@@ -23,20 +23,21 @@ Download:
 
 The release asset is a single plugin file: `Madby.dll`.
 
-## 最新更新
+## 最新更新：0.3.16
 
-- 新增“隐藏无媒体的媒体库”开关，只处理真正的 `CollectionFolder`。
-- 使用 Emby 数据库递归查询判断是否存在非文件夹媒体，不扫描文件系统目录树，也不删除任何媒体库或文件。
-- 按当前用户的可见权限判断；合集、播放列表、Live TV、频道等特殊视图不会被误隐藏。
-- 查询异常时保留原始媒体库列表，并使用短时缓存和媒体变更失效机制，避免影响 Emby 正常运行。
-- 深度删除会根据 STRM 内容删除 CD2 挂载目标及相关边车文件和空目录，并严格限制在允许的根路径内。
-- 默认 ffprobe 等待时间为 10 秒，插件页面 TAB 已恢复中文显示。
+- 修复通过 Emby“搜索字幕”下载 ASS 等字幕后只有文件、没有字幕轨道的问题；下载完成即登记，无需扫描媒体库。
+- 支持字幕保存到媒体同目录或 Emby 内部元数据目录，自动失效对应目录缓存。
+- 保留音视频轨道及索引，避免重复登记；关闭后台字幕扫描时，原生字幕下载仍正常登记。
+- 统一原生探测回退、重试、超时与恢复状态处理。
+- 深度删除会根据 STRM 内容删除 CD2 挂载目标及相关边车文件和空目录；删除整剧或整季时按 Emby 实际删除的每一集清理，删除单集时只清理该集，并严格限制在允许的根路径内。
+
+验证范围：本地行为回归与官方程序集兼容性检查，不代表完整 Emby 服务实测。
 
 SHA256:
 
-`AC07DB8E16FA6DCACD6A1C08F2112E1E8C5AC0CFDFB8F8916834DB1753EC7176`
+`be7438cfda59613ca74e3143b759652ac515da29fcea4dc88222294c1f25e0e9`
 
-Build size: `3312640 bytes`
+Build size: `3522048 bytes`
 
 ## Install
 
